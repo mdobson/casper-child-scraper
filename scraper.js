@@ -26,7 +26,7 @@ casper.start(url, function(){
 			};
 			urls.push(datapoint);
 		}
-		return JSON.stringify(urls);
+		return JSON.stringify({stories:urls});
 	}, selector, properties)
 });
 
