@@ -14,8 +14,8 @@ http.createServer(function (req, res) {
 		req.on('end', function () {
 			var POST = JSON.parse(body);
 			var args = ['scraper.js', '--url="'+POST.url+'"', '--selector="'+POST.selector+'"'];
-			for (var i = 0; i < POST.props.length; i++) {
-			var htmlProp = POST.props[i];
+			for (var i = 0; i < POST.properties.length; i++) {
+			var htmlProp = POST.properties[i];
 				args.push('"'+htmlProp+'"');
 			}
 			var argsString = "casperjs";
