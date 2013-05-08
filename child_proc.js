@@ -1,6 +1,7 @@
-var spawn = require('child_process').spawn;
+var spawn = require('child_process').spawn,
 	exec = require('child_process').exec,
 	http = require('http'),
+  port = process.env.PORT || 3000;
 
 http.createServer(function (req, res) {
 	if (req.method == 'POST') {
@@ -33,6 +34,6 @@ http.createServer(function (req, res) {
 			});
 		});
 	}
-}).listen(1337, '127.0.0.1');
+}).listen(port, '127.0.0.1');
 
 console.log('Server running at http://127.0.0.1:1337/');
