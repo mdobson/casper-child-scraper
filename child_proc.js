@@ -24,7 +24,7 @@ http.createServer(function (req, res) {
 			}
 			exec( argsString , function (error, stdout, stderr) {
 				if (error !== null) {
-					console.log('exec error: ' + error);
+					console.log('exec error code:'+error.code+' error: ' + error);
 				}
 				else {
 					res.writeHead(200, {'Content-Type': 'application/json'});
